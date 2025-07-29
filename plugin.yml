@@ -1,0 +1,13 @@
+name: StalkerEmission
+version: 1.1
+main: me.yourname.stalkeremission.StalkerEmission
+api-version: 1.12
+description: Плагин добавляющий выбросы из вселенной Сталкера
+author: YourName
+commands:
+  emissiontest:
+    description: Запускает тестовый выброс
+    usage: /emissiontest
+  emissionstop:
+    description: Останавливает активный выброс
+    usage: /emissionstop
