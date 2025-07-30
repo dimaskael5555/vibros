@@ -1,7 +1,7 @@
 name: StalkerEmission
 version: 1.3
 main: me.fixer.stalkeremission.StalkerEmission
-api-version: 1.19
+# api-version: 1.12
 description: Плагин добавляющий выбросы из вселенной Сталкера
 author: Fixer
 commands:

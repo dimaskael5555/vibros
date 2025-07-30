@@ -156,7 +156,7 @@ public final class StalkerEmission extends JavaPlugin {
         String subtitle = ChatColor.translateAlternateColorCodes('&', getConfig().getString("messages.emission_start_subtitle"));
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.sendTitle(title, subtitle, 10, 70, 20);
-            player.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1.0f, 0.5f);
+            player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 0.5f);
         }
 
         mainEmissionTask = new BukkitRunnable() {
@@ -208,10 +208,6 @@ public final class StalkerEmission extends JavaPlugin {
             }
         }
         
-        // Частицы
-        player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation().add(0, 1, 0), 30, 0.5, 0.5, 0.5,
-                new Particle.DustOptions(Color.LIME, 1.0f));
-
         // 3. Рассчитываем текущий шанс молний и взрывов
         double currentLightningChance = minLightningChance + (maxLightningChance - minLightningChance) * progress;
         if (random.nextDouble() * 100 < currentLightningChance) { // Используем nextDouble для точности
@@ -279,7 +275,7 @@ public final class StalkerEmission extends JavaPlugin {
 
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.sendTitle(title, subtitle, 10, 70, 20);
-            player.playSound(player.getLocation(), Sound.BLOCK_BEACON_DEACTIVATE, 1.0f, 1.5f);
+            player.playSound(player.getLocation(), Sound.BLOCK_BEACON_POWER_SELECT, 1.0f, 1.5f);
 
             // Удаляем негативные эффекты из конфига
              for (String effectName : getConfig().getConfigurationSection("emission.effects").getKeys(false)) {
