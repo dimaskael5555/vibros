@@ -1,0 +1,23 @@
+name: StalkerEmission
+version: 1.3
+main: me.fixer.stalkeremission.StalkerEmission
+api-version: 1.19
+description: Плагин добавляющий выбросы из вселенной Сталкера
+author: Fixer
+commands:
+  emissiontest:
+    description: Запускает выброс с фазой предупреждения.
+    usage: /emissiontest
+    permission: stalkeremission.admin
+  emissionstop:
+    description: Останавливает активный выброс.
+    usage: /emissionstop
+    permission: stalkeremission.admin
+  emissionnow:
+    description: Немедленно запускает выброс для дебага.
+    usage: /emissionnow
+    permission: stalkeremission.admin
+permissions:
+  stalkeremission.admin:
+    description: Позволяет управлять выбросами
+    default: op
